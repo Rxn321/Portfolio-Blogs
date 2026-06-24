@@ -1,4 +1,4 @@
-import About from "./components/About";
+import Enter from "./components/Enter";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
 import lightBg from "./assets/lightBg.jpg";
@@ -67,6 +67,10 @@ function App() {
 
       <div className="absolute bottom-0 left-1/2 -translate-x-1/2 z-10">
         <Footer />
+      </div>
+
+      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 z-10">
+        <Enter />
       </div>
     </div>
 
