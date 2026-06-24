@@ -1,26 +1,19 @@
-import profile from "../assets/hero.png";
-
-function Hero() {
+function About() {
   return (
-    <section className="min-h-screen flex flex-col items-center justify-center text-center">
+    <section className="max-w-xl mx-auto px-6 py-20">
 
-      <img
-        src={profile}
-        alt="Profile"
-        className="w-40 h-40 rounded-full object-cover"
-      />
+      <h2 className="text-2xl font-semibold">
+        Currently
+      </h2>
 
-      <h1 className="text-4xl font-bold mt-6">
-        Your Name
-      </h1>
-
-      <p className="mt-3 text-gray-500 max-w-md">
-        Software developer building simple,
-        clean, and meaningful projects.
+      <p className="mt-4 text-gray-600 leading-relaxed">
+        Currently learning web development,
+        building projects with React and
+        exploring new technologies.
       </p>
 
     </section>
   );
 }
 
-export default Hero;
+export default About;
