@@ -1,6 +1,7 @@
 import { getTheme } from "../styles/theme";
 
 function Enter({ darkMode }: { darkMode: boolean }) {
+  
   const theme = getTheme(darkMode);
 
   return (

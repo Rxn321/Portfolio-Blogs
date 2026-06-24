@@ -53,7 +53,7 @@ function App() {
 
 
       <div className="relative z-10">
-        <Header darkMode={darkMode} />
+        <Header darkMode={darkMode}/>
       </div>
 
 
