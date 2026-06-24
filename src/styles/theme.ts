@@ -1,8 +1,8 @@
 export const theme = {
   light: {
     bg: "bg-white",
-    text: "text-black",
-    muted: "text-black/50",
+    text: "text-white",
+    muted: "text-white/50",
     accent:
       "bg-gradient-to-r from-blue-400 to-indigo-600 bg-clip-text text-transparent",
     button:

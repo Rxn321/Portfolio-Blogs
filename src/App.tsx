@@ -40,7 +40,7 @@ function App() {
         }}
       
       />
-{/* Dark Mode Overlay */}
+
       <motion.div
         className="absolute inset-0 bg-black/40"
         animate={{
@@ -51,20 +51,25 @@ function App() {
         }}
       />
 
-{/* HEader */}
+
       <div className="relative z-10">
-        <Header darkMode={true} />
-{/* Toggle */}
+        <Header darkMode={darkMode} />
+      </div>
+
+
       <div className="absolute top-4 right-10 z-10">
         <Toggle
           darkMode={darkMode}
           toggleTheme={() => setDarkMode(!darkMode)}
         />
       </div>
-        <About />
+
+
+      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 z-10">
         <Footer />
       </div>
     </div>
+
   );
 }
 export default App;
