@@ -1,13 +1,15 @@
-type HeroProps = {
-  darkMode: boolean
-}
+import Hero from "./components/Hero";
+import About from "./components/About";
+import Footer from "./components/Footer";
 
-function Hero({ darkMode }: HeroProps) {
+function App() {
   return (
-    <section>
-      Hero
-    </section>
-  )
+    <div>
+      <Hero />
+      <About />
+      <Footer />
+    </div>
+  );
 }
 
-export default Hero
+export default App;
