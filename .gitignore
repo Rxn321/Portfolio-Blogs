@@ -29,8 +29,3 @@ Thumbs.db
 
 # TypeScript build files
 *.tsbuildinfo
-
-# Testing coverage
-coverage/
-
-uploads/
