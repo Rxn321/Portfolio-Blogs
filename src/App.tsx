@@ -1,9 +1,13 @@
-function App() {
-  return (
-    <h1 className="text-5xl font-bold text-blue-500">
-      Photo Blog
-    </h1>
-  );
+type HeroProps = {
+  darkMode: boolean
 }
 
-export default App;
+function Hero({ darkMode }: HeroProps) {
+  return (
+    <section>
+      Hero
+    </section>
+  )
+}
+
+export default Hero
