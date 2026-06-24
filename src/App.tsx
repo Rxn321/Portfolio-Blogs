@@ -1,27 +1,66 @@
 import About from "./components/About";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
-import bg from "./assets/bg.jpg";
+import lightBg from "./assets/lightBg.jpg";
+import darkBg from "./assets/darkBg.jpg";
 import { useState } from "react";
 import Toggle from "./components/Toggle";
+import { motion } from "framer-motion";
 
 function App() {
 
   const [darkMode,setDarkMode] = useState(false);
 
   return (
-    <div
-      className={`h-screen bg-cover bg-center relative ${darkMode ? "bg-[#16171d]" : "bg-white"}`}
-      style={{ backgroundImage: `url(${bg})` }}
-    >
-      <div className="absolute inset-0 bg-black/40" />
+    <div className="h-screen relative overflow-hidden">
 
+      {/* Light background */}
+      <motion.div
+        className="absolute inset-0 bg-cover bg-center"
+        style={{ backgroundImage: `url(${lightBg})` }}
+        animate={{
+          opacity: darkMode ? 0 : 1,
+          scale: darkMode ? 1.1 : 1,
+        }}
+        transition={{
+          duration: 0.7,
+        }}
+      />
+
+      {/* Dark background */}
+      <motion.div
+        className="absolute inset-0 bg-cover bg-center"
+        style={{ backgroundImage: `url(${darkBg})` }}
+        animate={{
+          opacity: darkMode ? 1 : 0,
+          filter: darkMode ? "blur(0px)" : "blur(5px)",
+        }}
+        transition={{
+          duration: 0.7,
+        }}
+      
+      />
+{/* Dark Mode Overlay */}
+      <motion.div
+        className="absolute inset-0 bg-black/40"
+        animate={{
+          opacity: darkMode ? 1 : 0,
+        }}
+        transition={{
+          duration: 0.7,
+        }}
+      />
+
+{/* HEader */}
       <div className="relative z-10">
         <Header darkMode={true} />
+{/* Toggle */}
+      <div className="absolute top-4 right-10 z-10">
         <Toggle
           darkMode={darkMode}
           toggleTheme={() => setDarkMode(!darkMode)}
         />
+      </div>
         <About />
         <Footer />
       </div>

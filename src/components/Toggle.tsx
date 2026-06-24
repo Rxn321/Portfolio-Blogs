@@ -2,17 +2,22 @@ import { motion } from "framer-motion"
 import { HiSun, HiMoon } from "react-icons/hi"
 import useIsMobile from "../styles/mobile"
 
-export default function Toggle({ darkMode, toggleTheme }) {
+interface ToggleProps {
+  darkMode: boolean;
+  toggleTheme: () => void;
+}
+
+export default function Toggle({ darkMode, toggleTheme }: ToggleProps) {
   const isMobile = useIsMobile();
 
   return (
     <button
     onClick={toggleTheme}
-    className={`w-10 h-12 md:h-16 flex items-center justify-center rounded-full backdrop-blur-xl border transition
+    className={`w-10 h-12 md:h-16 flex items-center justify-center rounded-full backdrop-blur-xl border transition hover:shadow-lg
         ${
         darkMode
-            ? "bg-white/10 border-white/10"
-            : "bg-black/10 border-black/10"
+            ? "bg-orange-200/10 border-white/20"
+            : "bg-sky-200/10 border-white/20"
         }
     `}
     >
@@ -33,7 +38,7 @@ export default function Toggle({ darkMode, toggleTheme }) {
             className={`w-7 h-7 rounded-full flex items-center justify-center shadow-md
                 ${
                 darkMode
-                    ? "bg-white/10 text-amber-200/90"
+                    ? "bg-white/10 text-yellow-100/90"
                     : "bg-white/10 text-white"
                 }
             `}
