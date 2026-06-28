@@ -13,7 +13,7 @@ export default function Toggle({ darkMode, toggleTheme }: ToggleProps) {
   return (
     <button
     onClick={toggleTheme}
-    className={`w-10 h-12 md:h-16 flex items-center justify-center rounded-full backdrop-blur-xl border transition hover:shadow-lg
+    className={`w-10 h-10 md:h-16 flex items-center justify-center rounded-full backdrop-blur-xl border transition hover:shadow-lg
         ${
         darkMode
             ? "bg-orange-200/10 border-white/20"
@@ -27,8 +27,8 @@ export default function Toggle({ darkMode, toggleTheme }: ToggleProps) {
         <motion.div
             animate={{
                 y: darkMode
-                ? (isMobile ? 6 : 12)
-                : (isMobile ? -6 : -12),
+                ? (isMobile ? 0 : 12)
+                : (isMobile ? 0 : -12),
             }}
             transition={{
                 type: "spring",
